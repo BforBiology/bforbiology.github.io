@@ -1,0 +1,154 @@
+[
+  {
+    "id": "resource-mw4sxejx-iviir",
+    "type": "note",
+    "classLevel": "11",
+    "title": "Introduction to Cell Biology",
+    "chapter": "Cell: The Unit of Life",
+    "summary": "Learn about cells, cell theory, and the basic structure of living cells.",
+    "tags": [
+      "Cell",
+      "Cell Biology",
+      "NCERT",
+      "Class 11"
+    ],
+    "body": "# Introduction to Cell Biology\n\n**What is a Cell?**\n\nCell जीवन की structural और functional unit है। सभी living organisms एक या अधिक cells से बने होते हैं।\n\n**Discovery of Cell**\n\nRobert Hooke ने 1665 में cork के पतले section का अध्ययन किया और छोटे compartments देखे, जिन्हें उन्होंने cells कहा।\n\n**Cell Theory**\n\nMatthias Schleiden और Theodor Schwann ने बताया कि plants और animals cells से बने होते हैं।\n\nबाद में Rudolf Virchow ने सिद्धांत दिया कि नए cells पहले से मौजूद cells से उत्पन्न होते हैं।\n\n**Types of Cells**\n\nProkaryotic cells में membrane-bound nucleus नहीं होता, जबकि eukaryotic cells में membrane-bound nucleus और organelles पाए जाते हैं।",
+    "cover": "",
+    "videoUrl": "",
+    "imageUrl": "",
+    "pdfUrl": ""
+  },
+  {
+    "id": "cell-structure-intro",
+    "type": "note",
+    "classLevel": "11",
+    "chapter": "Cell: The Unit of Life",
+    "title": "Cell Structure: The Fundamental Unit of Life",
+    "summary": "Understand prokaryotic and eukaryotic cells, the plasma membrane and major organelles.",
+    "tags": [
+      "cell",
+      "organelles",
+      "NCERT"
+    ],
+    "body": "Every living organism is made up of one or more cells. The cell is the structural and functional unit of life.\n\nProkaryotic cells lack a membrane-bound nucleus, while eukaryotic cells possess a true nucleus and membrane-bound organelles.\n\nThe plasma membrane is selectively permeable. Mitochondria are involved in aerobic respiration, chloroplasts in photosynthesis, and ribosomes in protein synthesis.\n\nStudy tip: Draw and label a plant cell and an animal cell and compare their structural features."
+  },
+  {
+    "id": "light-reaction-notes",
+    "type": "note",
+    "classLevel": "11",
+    "chapter": "Photosynthesis in Higher Plants",
+    "title": "Light Reaction of Photosynthesis — Quick Notes",
+    "summary": "Discover Photosystem 2, the electron transport chain, ATP and NADPH formation.",
+    "tags": [
+      "photosynthesis",
+      "chloroplast",
+      "ATP"
+    ],
+    "body": "The light reaction takes place on the thylakoid membranes of chloroplasts. Light energy excites electrons in the photosystems.\n\nPhotosystem 2 absorbs light and replaces lost electrons using electrons from water splitting, which releases oxygen and protons.\n\nElectron transport builds a proton gradient that powers ATP synthase. Photosystem 1 energizes electrons again; NADP+ is reduced to NADPH.\n\nATP and NADPH support carbon fixation in the Calvin cycle. These are introductory notes: check the NCERT chapter for all details."
+  },
+  {
+    "id": "reptilia-video",
+    "type": "video",
+    "classLevel": "11",
+    "chapter": "Animal Kingdom",
+    "title": "Class Reptilia — Video Lecture",
+    "summary": "Watch the video lesson and explore key features of reptiles.",
+    "tags": [
+      "reptiles",
+      "animal kingdom"
+    ],
+    "body": "Replace this demonstration with your own YouTube video link in Creator Studio. The video player will appear automatically when you add a valid YouTube URL."
+  },
+  {
+    "id": "plant-cell-diagram",
+    "type": "image",
+    "classLevel": "11",
+    "chapter": "Cell: The Unit of Life",
+    "title": "Plant Cell — Diagram Gallery",
+    "summary": "A starter image resource. Add your own labeled biological diagrams using Creator Studio.",
+    "tags": [
+      "diagram",
+      "plant cell"
+    ],
+    "body": "Upload your original diagram or add an image URL in Creator Studio. This sample card intentionally does not include a borrowed scientific illustration."
+  },
+  {
+    "id": "genetics-basics",
+    "type": "note",
+    "classLevel": "12",
+    "chapter": "Principles of Inheritance and Variation",
+    "title": "Mendelian Genetics: Laws of Inheritance",
+    "summary": "A beginner-friendly overview of dominance, segregation and independent assortment.",
+    "tags": [
+      "genetics",
+      "Mendel",
+      "inheritance"
+    ],
+    "body": "Gregor Mendel studied inheritance using pea plants. His experiments led to key principles explaining how traits pass between generations.\n\nThe law of segregation states that the two alleles of a gene separate during gamete formation.\n\nThe law of independent assortment describes the independent distribution of alleles of different genes when genes are unlinked. Linked genes may not assort independently.\n\nPractice with monohybrid and dihybrid crosses to build confidence."
+  },
+  {
+    "id": "cell-biology-quiz",
+    "type": "quiz",
+    "classLevel": "11",
+    "chapter": "Cell: The Unit of Life",
+    "title": "Cell Biology — 5 Question Practice Quiz",
+    "summary": "Test fundamental organelles and cell structure with instant scoring.",
+    "tags": [
+      "quiz",
+      "revision",
+      "cell"
+    ],
+    "questions": [
+      {
+        "question": "Which organelle is the main site of aerobic ATP generation in eukaryotes?",
+        "options": [
+          "Golgi apparatus",
+          "Mitochondrion",
+          "Nucleolus",
+          "Lysosome"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which structure is present in typical plant cells but absent in animal cells?",
+        "options": [
+          "Ribosome",
+          "Plasma membrane",
+          "Cellulose cell wall",
+          "Mitochondrion"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Where does translation occur?",
+        "options": [
+          "Ribosomes",
+          "Nucleus only",
+          "Lysosomes",
+          "Centrioles"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What is a defining feature of prokaryotes?",
+        "options": [
+          "They have mitochondria",
+          "They lack a membrane-bound nucleus",
+          "They lack DNA",
+          "They have chloroplasts"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which membrane is selectively permeable?",
+        "options": [
+          "Cell wall",
+          "Plasma membrane",
+          "Middle lamella",
+          "Chromosome"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+]

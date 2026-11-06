@@ -1,114 +1,47 @@
-# B for Biology — free website and creator dashboard
+# B for Biology — SEO upgrade (6 November 2026)
 
-This website is designed for **zero-cost public hosting on GitHub Pages**. It includes responsive design, dark mode, Class 11 / Class 12 browsing, instant search, category filters, article and PDF support, image galleries, embedded YouTube videos, MCQ quizzes with scoring, sharing, browser-local bookmarks, and a Creator Studio with GitHub publishing.
+**Free site:** https://bforbiology.github.io/  
+**Existing repository:** https://github.com/BforBiology/bforbiology.github.io
 
-## A. Publish your website free (about 8 steps)
+This upgrades the existing GitHub Pages website (not a new repository). It includes the existing sample resources **and** the Cell Biology note seen in the live repository on 6 November 2026. If your content has changed since then, back up your current `data/content.json` from GitHub before overwriting it.
 
-1. Unzip `B-for-Biology-Free-Website.zip` on your Windows computer.
-2. Make a free GitHub account at https://github.com/ .
-3. Select **+ → New repository**. Name it `bforbiology` (or another name). Set **Public** and create it.
-4. Open your new repository. Choose **Add file → Upload files**, drag **the files AND folders inside** `bforbiology-site` into the upload area. Confirm that `index.html`, `admin.html`, `assets/` and `data/` are in the repository root. Commit changes. (If browser folder upload is awkward, use GitHub Desktop to push the extracted folder.)
-5. In the repository open **Settings → Pages**. Select **Deploy from a branch**, choose `main` and `/(root)`, and click **Save**.
-6. GitHub will display the free address: `https://YOUR-USERNAME.github.io/bforbiology/` (the repository name appears in the URL). It can take several minutes to appear.
-7. Visit that address to see your public website. Visitors do not need GitHub accounts.
-8. The creator dashboard is at `https://YOUR-USERNAME.github.io/bforbiology/admin.html`.
+## Deploy in five steps
 
-No domain or paid hosting is required. The repository is **public**: do not upload private files, students' personal information, or copyrighted materials without permission.
+1. Back up your current repository first: **Code → Download ZIP** on GitHub. Separately download the current `data/content.json` if you added newer resources.
+2. Extract this upgrade ZIP. Open the root folder and **upload its contents**, not the outer folder or the ZIP, to `https://github.com/BforBiology/bforbiology.github.io/upload/main`.
+3. Github's browser upload may not replace existing files cleanly. The reliable option is **GitHub Desktop**: clone your repository, copy the extracted upgrade's contents into the clone, then **Commit to main → Push origin**. This replaces matching files and preserves existing Git history. Never place a token in the repository.
+4. If you have content newer than this package, retain your live `data/content.json` and use Creator Studio to regenerate pages (or restore it before publishing).
+5. Confirm GitHub Pages Settings → Pages → Deploy from branch → main / (root). Visit `https://bforbiology.github.io/` when updated.
 
-Official setup: https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
+## Keep individual pages searchable
 
-## B. Connect Creator Studio to publish changes
+- Each resource has a real public page at `/lessons/<resource-id>/` and is listed in `sitemap.xml`.
+- After editing or adding a resource in Creator Studio, click **Save locally**, then **Publish all to GitHub**. The upgraded publisher updates JSON, generates a static HTML page for each resource, removes old generated pages for deleted resources, and updates `sitemap.xml`.
+- If any individual file publish fails, check the detailed status and repeat only after checking the remote files; backup your JSON before major changes. Avoid concurrent editing from two browser tabs.
+- Sitemap: `https://bforbiology.github.io/sitemap.xml`. Add this in Search Console → Sitemaps as `sitemap.xml`.
 
-The public website reads its content from `data/content.json`. The Creator Studio lets you edit that file through GitHub's API.
+## Creator Studio instructions
 
-1. In GitHub open **Settings (your profile) → Developer settings → Personal access tokens → Fine-grained tokens**. Select **Generate new token**.
-2. Set a description such as `B for Biology creator studio`, choose a short expiration date, select your GitHub account as resource owner, and limit repository access to **Only select repositories → bforbiology**.
-3. Under Repository permissions set **Contents: Read and write**. Do not grant unrelated permissions.
-4. Create the token and copy it once. Keep it secret. Never share it in chat, posts, screenshots or website files.
-5. On your public site visit `admin.html`. Enter your GitHub username, repository name (`bforbiology`), branch (`main`), and the token. Click **Load from GitHub**.
-6. Fill the Creator Studio form, click **Save resource locally**, then **Publish all to GitHub**. A commit updates `data/content.json`; GitHub Pages redeploys automatically.
-7. When finished, click **Forget connection** and close the tab. Recreate a token if it expires.
+1. Open `https://bforbiology.github.io/admin.html` from a trusted device.
+2. Enter **BforBiology**, **bforbiology.github.io**, branch **main**, and your fine-grained GitHub token limited to this repository with **Contents: Read/write**. Never put the token in source code or screenshots.
+3. Select an existing resource to edit or fill the new resource form. You can write Hindi and English text, upload small PDFs and images, embed YouTube videos, and add MCQ quiz JSON.
+4. Click **Save resource locally**. Then **Publish all to GitHub** to deploy.
+5. Click **Forget connection** and close the browser tab when finished. The token remains in browser tab memory only; drafts are stored in browser local storage. The dashboard page is PUBLIC (not a password-protected admin server).
 
-The token is kept **only in the open browser tab's JavaScript memory**. It is **not** saved in the content file, browser localStorage, or HTML. Browser localStorage holds draft content only. Anyone can *see* `admin.html` but without repository authorization they cannot publish. If you prefer, delete `admin.html` and `assets/admin.js` from your published repository and use a local copy of Creator Studio over a local web server.
+## Limitations and honest disclosures
 
-## C. Add notes or PDF lessons
+- This is a **static site**, not a private server-side CMS. Avoid entering sensitive student information.
+- Content metadata lives in `data/content.json` (public). The individual lesson pages become indexable only *after* publishing them.
+- Do not assume Google will index or rank every resource; sitemap submission is not guaranteed indexing.
+- The sample resources are for demonstration, and some lack videos/images. Replace them with substantial, original material before considering advertising.
+- Contact is a public GitHub Issues link until you configure a real address.
+- Privacy Policy is a starting policy describing the provided code; review and update it before adding analytics, advertising, contact forms or tracking.
+- A GitHub Pages `github.io` address and GitHub's non-commercial-use restrictions may limit monetization. Verify current ad network requirements and hosting terms before applying.
+- External Google fonts in the existing CSS can entail third-party network requests; change to system fonts if you want no external font requests.
 
-- In Creator Studio, choose **Note / Article / PDF**, select Class 11 or 12, type title, chapter, summary, tags, and lesson text.
-- For a PDF file, choose it in **Upload files**, and click **Upload file to GitHub** (requires connection). Copy the returned relative path such as `assets/uploads/1762500000-chapter1.pdf` into **PDF file URL**.
-- Save locally, then Publish all to GitHub. Users will see an **Open / download notes PDF** button.
-- For longer notes write directly in the **Lesson explanation / notes** field. Blank lines create paragraphs. HTML is deliberately not executed.
+## Verify after deploy
 
-## D. Add videos
-
-- Upload your original video to YouTube (public or unlisted if you only want people with a link to access it).
-- In Creator Studio select **Video lesson**, paste the YouTube video URL in **YouTube link**, add title, description, class and chapter, save and publish.
-- YouTube handles large video files and playback. This is more efficient than uploading videos directly to GitHub. Do not use copyrighted videos without permission.
-
-## E. Add images and diagrams
-
-- Create your own image or use content you have rights to publish.
-- Upload JPG/PNG/WEBP/SVG via Creator Studio, copy the returned path to **Image URL** (and optionally **Cover image URL**), save and publish.
-- You can also provide an external `https://` image URL if usage rights permit.
-
-## F. Create interactive quizzes
-
-Choose **Quiz** and paste an array into **Quiz questions**, for example:
-
-```json
-[
-  {
-    "question": "Which organelle produces most ATP during aerobic respiration?",
-    "options": ["Golgi apparatus", "Mitochondrion", "Ribosome", "Nucleolus"],
-    "answer": 1
-  },
-  {
-    "question": "Which pigment is the primary reaction-centre pigment?",
-    "options": ["Chlorophyll a", "Xanthophyll", "Carotene"],
-    "answer": 0
-  }
-]
-```
-
-`answer` uses index 0 for the first option, 1 for the second, etc. The quiz displays immediate total score on submission.
-
-## G. Edit existing content and backups
-
-- In **Manage and publish**, choose **Edit** or **Delete** next to an existing resource.
-- **Save resource locally** creates a private draft in your browser. This is *not* visible to visitors until you click Publish all to GitHub.
-- **Download content backup** exports a JSON file you can keep safely. **Import backup** restores the draft list. This backup does **not** include separate uploaded PDF/images—those remain in your GitHub repository.
-- Before using a new computer, connect and **Load from GitHub** to see the published content.
-
-## H. Free tier constraints and candid limitations
-
-- GitHub Pages is static hosting. There is no built-in database, server-side membership system, private file storage, automatic video transcoding, or student accounts.
-- Anyone with the public site URL can read published content; links cannot make public files private.
-- Each Creator Studio upload is capped at **8 MB**, and large video files should be placed on YouTube rather than the GitHub repository.
-- GitHub Pages has usage and site-size limits. The current official limits are at https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits .
-- No automatic ad monetization or analytics is configured; these require separate setup and eligibility.
-- GitHub Pages is not intended to run an online commerce site or sensitive transactions. This website has no payment processing or server login.
-- You will need a free GitHub account and must publish to your own repository. The downloaded zip alone is not an online website.
-- The page fonts are loaded from Google Fonts when online; system fonts are used when offline.
-
-## I. Preview on Windows without deploying
-
-If you have Python installed: open Command Prompt inside the extracted `bforbiology-site` directory and run:
-
-```bat
-py -m http.server 8000
-```
-
-Open `http://localhost:8000/` in Chrome. Open `/admin.html` for Creator Studio. GitHub publishing and file uploads still require an internet connection.
-
-## J. Site files
-
-- `index.html`: student-facing website
-- `admin.html`: creator dashboard
-- `assets/style.css`: design
-- `assets/app.js`: site logic, search, readers and quizzes
-- `assets/admin.js`: creator dashboard and GitHub publishing logic
-- `data/content.json`: all notes, video links, image links and quiz definitions
-- `assets/uploads/`: uploaded resources go here
-- `.nojekyll`: allows static GitHub Pages assets to publish as-is
-- `README.html`: browser-friendly publishing guide
-
-Built without frameworks, paid APIs, tracking scripts or account requirements for visitors.
+- Homepage loads stylesheet and lists lessons.
+- Click a resource and verify a dedicated lesson page loads.
+- Open `/about.html`, `/contact.html`, `/privacy.html`, `/disclaimer.html`, `/sitemap.xml`, `/robots.txt`.
+- Open Creator Studio, connect, edit a resource, save locally, then publish and check the generated page.
